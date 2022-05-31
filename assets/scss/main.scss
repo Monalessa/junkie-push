@@ -1,0 +1,246 @@
+// @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// $bg-clr: 250,250,250;
+
+img{
+    width: 100%;
+    display: block;
+}
+
+body{
+    background-color: #fafafa;
+    // font-family: 'PT Serif', serif;
+    // font-family: 'IBM Plex Serif', serif;
+    font-family: 'Montserrat', sans-serif;
+    // background-color: rgba(var(--b3f,250,250,250),1);
+}
+.main-content{
+    padding: 4rem 3rem;
+    .hero-img{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 180px;
+        }
+    }
+    .form-container{
+        margin-top: 20px;
+        text-align: center;
+        form{
+            .form-group{
+                margin: 8px 0;
+                .form-control{
+                    background: #fafafa;
+                    padding: 12px 0 7px 9px;
+                    border: 0;
+                    border-radius: 2px;
+                    outline: 1px solid #e3e3e3;
+                    font-family: inherit;
+                    color: black;
+                    width: 100%;
+                    font-size: 12px;
+                    &:focus{
+                        outline: 1px solid #a8a8a8;
+                    }
+                }
+                .btn{
+                    // background-color: #0095f6;
+                    outline: none;
+                    border: none;
+                    background-color: rgba(0,149,246,.3);
+                    color: #fff;
+                    margin: 10px 0;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+        .divider{
+            display: block;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #8e8e8e;
+            font-size: 14px;
+            position: relative;
+            &::before{
+                content: "";
+                background: #dbdbdb;
+                position: absolute;
+                top: 8px;
+                left: 0;
+                width: 40%;
+                height: 1px;
+            }
+            &::after{
+                content: "";
+                background: #dbdbdb;
+                position: absolute;
+                top: 8px;
+                right: 0;
+                width: 40%;
+                height: 1px;
+            }
+        }
+        .log-in-fb{
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            margin-bottom: 10px;
+            color: #385185;
+            font-size: 18px;
+            a{
+                text-decoration: none;
+                color: #274e74;
+                font-size: 14px;
+                font-family: sans-serif;
+            }
+        }
+        .forgot{
+            font-size: 12px;
+            .forgot-pword{
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+        .sign-up{
+            display: block;
+            font-size: 14px;
+            margin-top: 3rem;
+            a{
+                color: #0095f6;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+    .get-app{
+        color: #000000;
+        text-align: center;
+        margin-bottom: 10px;
+        .title{
+            display: block;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+        .apps{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+}
+footer{
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+    .links{
+        a{
+            color: #8e8e8e;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+    .sub-links{
+        margin-top: 10px;
+        text-align: center;
+        span{
+            color: #8e8e8e;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .main-content{
+        max-width: 50vw;
+        margin: 0 auto;
+        border: 1px solid #8e8e8e;
+        margin-top: 2rem;
+        padding: 2rem;
+        background: #fff;
+        border: 1px solid #dbdbdb;
+        border-radius: 1px;
+        .hero-img{
+            img{
+                width: 140px;
+            }
+        }
+        .form-container{
+            .form-group{
+                .form-control{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-content{
+        width: 40vw;
+        // .form-container{
+        //     .sign-up{
+        //         border: 1px solid #8e8e8e;
+        //     }
+        // }
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .main-content{
+        width: 35vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-content{
+        width: 26vw;
+        .form-container{
+                form{
+                    .form-group{
+                        .form-control{
+                            font-size: 11px;
+                        }
+                }
+            }
+            .divider{
+                font-size: 11px;
+                &::before{
+                    top: 6px;
+                }
+                &::after{
+                    top: 6px;
+                }
+
+            }
+            .sign-up{
+                // border: 1px solid #8e8e8e;
+                font-size: 12px;
+                }
+            }
+            .get-app{
+                .title{
+                    font-size: 12px;
+                }
+            }
+    }
+}
